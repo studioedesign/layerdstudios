@@ -158,7 +158,7 @@ section{width:100%}
 .combo-bar{height:5px;background:rgba(26,23,48,.15);width:100%}
 .combo-fill{height:100%;background:var(--orange);width:0%;transition:width .1s}
 .combo-lbl{font-family:'Syne',sans-serif;font-size:.7rem;font-weight:700;color:var(--orange);text-align:right;margin-top:3px;min-height:1rem;letter-spacing:1px}
-.gtgt{position:absolute;cursor:none;user-select:none;animation:bobb .5s ease-in-out infinite alternate;font-weight:800;line-height:1}
+.gtgt{position:absolute;cursor:none;user-select:none;font-weight:800;line-height:1}
 @keyframes bobb{from{transform:scale(1)}to{transform:scale(1.15)}}
 .gtgt.hit{animation:exp .35s forwards;pointer-events:none}
 @keyframes exp{0%{transform:scale(1);opacity:1}60%{transform:scale(2.2);opacity:.4}100%{transform:scale(0);opacity:0}}
@@ -168,9 +168,34 @@ section{width:100%}
 .go-pts{font-family:'Syne',sans-serif;font-size:5rem;font-weight:900;color:var(--lime);line-height:1}
 .go-nm{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--orange)}
 .go-rk{font-size:.88rem;opacity:.65;margin-top:-.3rem}
+.go-stats{display:flex;gap:1.5rem;margin-top:.4rem}
+.go-stat{text-align:center}
+.go-stat b{display:block;font-family:'Syne',sans-serif;font-weight:900;font-size:1.4rem;color:var(--cream)}
+.go-stat span{font-size:.62rem;opacity:.45;letter-spacing:1px;text-transform:uppercase}
 .go-pos{font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;color:var(--lav);letter-spacing:1px}
 .go-btn{background:var(--lime);color:var(--navy);border:3px solid var(--lime);font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;padding:12px 28px;cursor:none;letter-spacing:1px;text-transform:uppercase;transition:all .2s;margin-top:.5rem}
 .go-btn:hover{background:var(--orange);border-color:var(--orange);color:var(--cream)}
+/* start prompt */
+.gstart{position:absolute;inset:0;background:rgba(26,23,48,.92);color:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;z-index:15;transition:opacity .3s}
+.gstart.hide{opacity:0;pointer-events:none}
+.gstart-ico{font-size:3rem;color:var(--lime);animation:spin 4s linear infinite;margin-bottom:1rem}
+.gstart-t{font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;margin-bottom:.7rem;color:var(--lime)}
+.gstart-s{font-size:.82rem;opacity:.7;line-height:1.7;max-width:340px}
+/* countdown */
+.gcountdown{position:absolute;inset:0;display:none;align-items:center;justify-content:center;z-index:18;pointer-events:none}
+.gcountdown.show{display:flex}
+.gcd-num{font-family:'Syne',sans-serif;font-weight:900;font-size:7rem;color:var(--lime);text-shadow:0 4px 0 var(--navy);animation:cdpop .8s ease-out}
+@keyframes cdpop{0%{transform:scale(.3);opacity:0}40%{transform:scale(1.1);opacity:1}100%{transform:scale(.6);opacity:0}}
+/* target ring (life indicator) */
+.gtgt{position:absolute;cursor:none;user-select:none;font-weight:800;line-height:1;display:flex;align-items:center;justify-content:center}
+.gtgt .gt-ring{position:absolute;width:130%;height:130%;border:2px solid currentColor;border-radius:50%;opacity:.35;animation:gring linear forwards}
+@keyframes gring{from{transform:scale(1.25);opacity:.5}to{transform:scale(.55);opacity:.1}}
+.gtgt.special{filter:drop-shadow(0 0 8px currentColor)}
+.gtgt.bonus{animation:bonusspin 1.1s linear infinite}
+@keyframes bonusspin{to{transform:rotate(360deg)}}
+.gparticle{position:absolute;pointer-events:none;border-radius:50%;z-index:9}
+/* hit flash */
+.ghitflash{position:absolute;inset:0;background:var(--lime);opacity:0;pointer-events:none;z-index:5}
 
 /* RANKING */
 .rank-panel{background:var(--navy);padding:0;color:var(--cream)}
@@ -329,7 +354,7 @@ body.intro-on{overflow:hidden;height:100vh}
 @media(max-width:680px){
   body{cursor:auto}
   #cur,.tip{display:none!important}
-  a,button,.nlinks a,.nbtn,.btn-n,.btn-o,.svc-card,.psw,.step,.wcard,.badge,.stat,.vbox,.cpill,.fsi,.gplay,.go-btn,.iorb,.intro-enter,.intro-skip,.pp-back,.pp-notify input,.pp-notify button,.ginp{cursor:pointer!important}
+  a,button,.nlinks a,.nbtn,.btn-n,.btn-o,.svc-card,.psw,.step,.wcard,.badge,.stat,.vbox,.cpill,.fsi,.gplay,.go-btn,.iorb,.intro-enter,.intro-skip,.pp-back,.pp-notify input,.pp-notify button,.ginp,.gtgt{cursor:pointer!important}
   .ginp,.pp-notify input{cursor:text!important}
   nav{padding:.85rem 1.1rem;flex-wrap:wrap;gap:.5rem}
   .nlogo{font-size:1.25rem}
@@ -368,7 +393,13 @@ body.intro-on{overflow:hidden;height:100vh}
   .gplay{width:100%}
   .arena{height:300px}
   .gbar{flex-wrap:wrap}
-  .gst,.gtmr{font-size:.75rem;padding:6px 10px}
+  .gbar{flex-wrap:wrap}
+  .gst,.gtmr{font-size:.7rem;padding:6px 8px;flex:1 1 40%}
+  .gstart-t{font-size:1rem}
+  .gstart-s{font-size:.75rem}
+  .gcd-num{font-size:5rem}
+  .go-stats{gap:1rem}
+  .go-stat b{font-size:1.15rem}
   .go-pts{font-size:3.5rem}
   .works-grid{grid-template-columns:1fr 1fr;gap:4px}
   .wcard-bg{font-size:5rem!important}
@@ -407,7 +438,7 @@ body.intro-on{overflow:hidden;height:100vh}
   </div>
   <div class="intro-tag"><span class="intro-star">✳</span> bem-vindo ao estúdio</div>
   <h1 class="intro-logo">
-    <span class="il-l1"><span>LAY<span class="intro-star" style="-webkit-text-stroke:0">✳</span>R'D</span></span>
+    <span class="il-l1"><span>LAY<span style="color:var(--orange);-webkit-text-stroke:0">E</span>R'D</span></span>
     <span class="il-l2"><span>STUDIOS</span></span>
   </h1>
   <p class="intro-sub">Estética, estratégia e conteúdo pra marcas que se posicionam de verdade.</p>
@@ -425,7 +456,7 @@ body.intro-on{overflow:hidden;height:100vh}
 <div id="planos-page">
   <div class="pp-nav">
     <button class="pp-back" id="ppBack">← Voltar ao site</button>
-    <div class="pp-logo">lay<b>✳</b>r'd</div>
+    <div class="pp-logo">lay<b>e</b>r'd</div>
   </div>
   <div class="pp-body">
     <div class="pp-tag"><span class="spin">✳</span> planos & valores</div>
@@ -467,7 +498,7 @@ body.intro-on{overflow:hidden;height:100vh}
 </div>
 
 <nav>
-  <div class="nlogo">lay<b>✳</b>r'd</div>
+  <div class="nlogo">lay<b>e</b>r'd</div>
   <ul class="nlinks">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#servicos">Serviços</a></li>
@@ -484,7 +515,7 @@ body.intro-on{overflow:hidden;height:100vh}
   </div>
   <div class="htag"><span class="spin">✳</span> nova identidade · novo estudio</div>
   <h1 class="htitle" id="heroT">
-    <span>LAY<span style="color:var(--orange)">✳</span>R'D</span>
+    <span>LAY<span style="color:var(--orange)">E</span>R'D</span>
     <span class="ol">STUDIOS</span>
   </h1>
   <p class="hsubt">Mais do que design — construímos presença. Estética, estratégia e conteúdo pra transformar marcas que realmente se posicionam no digital.</p>
@@ -611,10 +642,17 @@ body.intro-on{overflow:hidden;height:100vh}
       </div>
       <div class="arena" id="arena">
         <div class="arena-grid"></div>
+        <div class="gstart" id="gstart">
+          <div class="gstart-ico">✳</div>
+          <p class="gstart-t">Toque nos símbolos antes que sumam</p>
+          <p class="gstart-s">Os <b style="color:var(--lime)">dourados piscando</b> valem mais · sequências ativam <b style="color:var(--orange)">combo</b> · pegue o <b style="color:var(--blue)">⏱</b> pra ganhar tempo</p>
+        </div>
+        <div class="gcountdown" id="gcountdown"></div>
         <div class="gover" id="gover">
           <div class="go-pts" id="goPts">0</div>
           <div class="go-nm" id="goNm"></div>
           <div class="go-rk" id="goRk"></div>
+          <div class="go-stats" id="goStats"></div>
           <div class="go-pos" id="goPos"></div>
           <button class="go-btn" onclick="restartGame()">Jogar de novo ✳</button>
         </div>
@@ -622,6 +660,7 @@ body.intro-on{overflow:hidden;height:100vh}
       <div class="gbar">
         <div class="gst">PTS: <span id="gscore">0</span></div>
         <div class="gst">COMBO: <span id="gcombo">x1</span></div>
+        <div class="gst">ACERTOS: <span id="ghits">0</span></div>
         <div class="gtmr" id="gtmrBox">TEMPO: <span id="gtime">15</span>s</div>
       </div>
       <div class="combo-bar"><div class="combo-fill" id="cmbFill"></div></div>
@@ -673,7 +712,7 @@ body.intro-on{overflow:hidden;height:100vh}
 </section>
 
 <footer>
-  <div class="flogo">lay<b>✳</b>r'd studios</div>
+  <div class="flogo">lay<b>e</b>r'd studios</div>
   <div class="fcopy">© 2025 Layerd Studios</div>
   <div class="fsocial">
     <div class="fsi">in</div><div class="fsi">ig</div><div class="fsi">be</div>
@@ -866,6 +905,7 @@ document.getElementById('ppNotify').addEventListener('click', ()=>{
 // =================== GAME ===================
 let score = 0, timeLeft = 15, active = false, gIv = null, tIv = null;
 let combo = 1, comboCount = 0, comboTimer = null;
+let hits = 0, totalSpawned = 0, bestCombo = 1, elapsed = 0;
 let lastPlayerName = '';
 const arena = document.getElementById('arena');
 const gover = document.getElementById('gover');
@@ -873,16 +913,19 @@ const gscoreEl = document.getElementById('gscore');
 const gtimeEl = document.getElementById('gtime');
 const gtmrBox = document.getElementById('gtmrBox');
 const gcomboEl = document.getElementById('gcombo');
+const ghitsEl = document.getElementById('ghits');
 const cmbFill = document.getElementById('cmbFill');
 const cmbLbl = document.getElementById('cmbLbl');
+const gstartEl = document.getElementById('gstart');
+const gcdEl = document.getElementById('gcountdown');
 const rankListEl = document.getElementById('rankList');
 
 const syms = ['✳','✦','❋','★','◈'];
 const cols = ['#C5D400','#D94F1E','#BBA8D6','#4E6FD4','#FFFFFF','#F4EFC8'];
 const rankTiers = [
-  [0,'Ainda aprendendo...'], [8,'Designer em formação!'],
-  [18,'Tem talento visual!'], [30,'Olho bem afiado!'],
-  [50,'Designer nato! ✳'], [75,'LENDA DO ASTERISCO!!']
+  [0,'Ainda aprendendo...'], [15,'Designer em formação!'],
+  [35,'Tem talento visual!'], [60,'Olho bem afiado!'],
+  [90,'Designer nato! ✳'], [130,'LENDA DO ASTERISCO!!']
 ];
 function getRankLabel(pts) {
   let lbl = rankTiers[0][1];
@@ -892,22 +935,40 @@ function getRankLabel(pts) {
 
 // ===== PERSISTENT STORAGE =====
 const STORAGE_KEY = 'layerd_ranking_v1';
+let cachedRanking = null; // last known-good ranking, shared across all visitors
 
-async function loadRanking() {
+// Returns {ok:true, data:[...]} on success (including legit empty),
+// or {ok:false} when the read failed and we should NOT trust the result.
+async function readRanking() {
   try {
     const res = await window.storage.get(STORAGE_KEY, true);
-    return res ? JSON.parse(res.value) : [];
-  } catch (e) { return []; }
+    if (!res) return { ok: true, data: [] };          // key truly absent
+    const parsed = JSON.parse(res.value);
+    return { ok: true, data: Array.isArray(parsed) ? parsed : [] };
+  } catch (e) {
+    // Non-existent key throws, as do transient errors. If we already have a
+    // cached list, treat this as "no change" rather than an empty ranking.
+    if (cachedRanking !== null) return { ok: false };
+    return { ok: true, data: [] };                     // first load, nothing yet
+  }
+}
+
+async function loadRanking() {
+  const r = await readRanking();
+  if (r.ok) { cachedRanking = r.data; return r.data; }
+  return cachedRanking || [];
 }
 
 async function saveRanking(data) {
   try {
     await window.storage.set(STORAGE_KEY, JSON.stringify(data), true);
+    cachedRanking = data;
   } catch (e) {}
 }
 
 async function addScore(name, pts) {
   let ranking = await loadRanking();
+  ranking = ranking.slice();
   const time = new Date().toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
   ranking.push({ name, pts, time });
   ranking.sort((a, b) => b.pts - a.pts);
@@ -928,7 +989,7 @@ function renderRanking(ranking, highlightName) {
     const posClass = i < 3 ? cls[i] : '';
     const pos = i < 3 ? medals[i] : `#${i+1}`;
     const posSpanClass = i < 3 ? '' : 'rpos-def';
-    return `<div class="rank-item ${posClass} ${isMe ? 'me' : ''} new-in">
+    return `<div class="rank-item ${posClass} ${isMe ? 'me' : ''}">
       <div class="rpos ${posSpanClass}">${pos}</div>
       <div class="rinfo">
         <div class="rname">${r.name}${isMe ? ' ← você' : ''}</div>
@@ -946,13 +1007,15 @@ async function initRanking() {
 }
 initRanking();
 
-// Auto-refresh ranking every 15s
+// Auto-refresh: only re-render when we actually got fresh, valid data.
+// A failed/transient read leaves the visible ranking untouched.
 setInterval(async () => {
-  if (!active) {
-    const data = await loadRanking();
-    renderRanking(data, lastPlayerName);
-  }
-}, 15000);
+  if (active) return;
+  const r = await readRanking();
+  if (!r.ok) return;                 // read failed → keep what's on screen
+  cachedRanking = r.data;
+  renderRanking(r.data, lastPlayerName);
+}, 12000);
 
 function getPlayerName() {
   return document.getElementById('pname').value.trim() || 'Anônimo';
@@ -961,74 +1024,183 @@ function getPlayerName() {
 function startGame() {
   const name = getPlayerName();
   lastPlayerName = name;
-  score = 0; timeLeft = 15; active = true; combo = 1; comboCount = 0;
+  score = 0; timeLeft = 18; active = false; combo = 1; comboCount = 0;
+  hits = 0; totalSpawned = 0; bestCombo = 1; elapsed = 0;
   gscoreEl.textContent = 0;
-  gtimeEl.textContent = 15;
+  gtimeEl.textContent = 18;
+  ghitsEl.textContent = 0;
   gtmrBox.classList.remove('low');
   gcomboEl.textContent = 'x1';
   cmbFill.style.width = '0%';
   cmbLbl.textContent = '';
   gover.style.display = 'none';
+  gstartEl.classList.add('hide');
   document.getElementById('playBtn').disabled = true;
-  arena.querySelectorAll('.gtgt').forEach(t => t.remove());
+  arena.querySelectorAll('.gtgt,.popscr,.gparticle').forEach(t => t.remove());
 
+  // 3-2-1 countdown, then go
+  let cd = 3;
+  gcdEl.classList.add('show');
+  gcdEl.innerHTML = `<div class="gcd-num">${cd}</div>`;
+  const cdIv = setInterval(() => {
+    cd--;
+    if (cd > 0) {
+      gcdEl.innerHTML = `<div class="gcd-num">${cd}</div>`;
+    } else if (cd === 0) {
+      gcdEl.innerHTML = `<div class="gcd-num">JÁ!</div>`;
+    } else {
+      clearInterval(cdIv);
+      gcdEl.classList.remove('show');
+      gcdEl.innerHTML = '';
+      runGame();
+    }
+  }, 800);
+}
+
+function runGame() {
+  active = true;
   gIv = setInterval(() => {
-    timeLeft--;
+    timeLeft--; elapsed++;
     gtimeEl.textContent = timeLeft;
     if (timeLeft <= 5) gtmrBox.classList.add('low');
+    else gtmrBox.classList.remove('low');
     if (timeLeft <= 0) endGame();
   }, 1000);
-  tIv = setInterval(spawnTarget, 550);
-  for (let i = 0; i < 5; i++) setTimeout(spawnTarget, i * 110);
+  scheduleSpawn();
+  for (let i = 0; i < 4; i++) setTimeout(spawnTarget, i * 120);
+}
+
+// spawn rate accelerates as time passes (difficulty ramp)
+function scheduleSpawn() {
+  if (!active) return;
+  spawnTarget();
+  const interval = Math.max(260, 620 - elapsed * 28); // 620ms → ~260ms
+  tIv = setTimeout(scheduleSpawn, interval);
+}
+
+function makeParticles(x, y, color) {
+  for (let i = 0; i < 8; i++) {
+    const p = document.createElement('div');
+    p.className = 'gparticle';
+    const sz = Math.random() * 6 + 3;
+    p.style.width = sz + 'px'; p.style.height = sz + 'px';
+    p.style.background = color;
+    p.style.left = x + 'px'; p.style.top = y + 'px';
+    p.style.transition = 'transform .5s ease-out, opacity .5s ease-out';
+    arena.appendChild(p);
+    const ang = Math.random() * Math.PI * 2;
+    const dist = Math.random() * 45 + 20;
+    requestAnimationFrame(() => {
+      p.style.transform = `translate(${Math.cos(ang)*dist}px,${Math.sin(ang)*dist}px) scale(0)`;
+      p.style.opacity = '0';
+    });
+    setTimeout(() => { if (arena.contains(p)) arena.removeChild(p); }, 520);
+  }
+}
+
+function registerHit(t, pts, isBonus) {
+  if (!active) return;
+  t.classList.add('hit');
+  const r = arena.getBoundingClientRect();
+  const tr = t.getBoundingClientRect();
+  const cx = tr.left - r.left + tr.width / 2;
+  const cy = tr.top - r.top + tr.height / 2;
+  makeParticles(cx, cy, t.style.color || '#C5D400');
+
+  if (isBonus) {
+    timeLeft += 3;
+    gtimeEl.textContent = timeLeft;
+    const pop = document.createElement('div');
+    pop.className = 'popscr';
+    pop.textContent = '+3s ⏱';
+    pop.style.color = 'var(--blue)';
+    pop.style.left = t.style.left; pop.style.top = t.style.top;
+    arena.appendChild(pop);
+    setTimeout(() => { if (arena.contains(pop)) arena.removeChild(pop); }, 700);
+    setTimeout(() => { if (arena.contains(t)) arena.removeChild(t); }, 360);
+    return;
+  }
+
+  hits++;
+  ghitsEl.textContent = hits;
+  const actual = pts * combo;
+  score += actual;
+  gscoreEl.textContent = score;
+  comboCount++;
+  if (comboCount >= 3) { combo = Math.min(combo + 1, 8); comboCount = 0; }
+  if (combo > bestCombo) bestCombo = combo;
+  gcomboEl.textContent = 'x' + combo;
+  cmbFill.style.width = (comboCount / 3 * 100) + '%';
+  if (combo > 1) cmbLbl.textContent = 'COMBO x' + combo + '!';
+  clearTimeout(comboTimer);
+  comboTimer = setTimeout(() => { combo = 1; comboCount = 0; gcomboEl.textContent = 'x1'; cmbFill.style.width = '0%'; cmbLbl.textContent = ''; }, 1700);
+
+  const pop = document.createElement('div');
+  pop.className = 'popscr';
+  pop.textContent = '+' + actual + (combo > 1 ? ' ✳' : '');
+  pop.style.left = t.style.left; pop.style.top = t.style.top;
+  arena.appendChild(pop);
+  setTimeout(() => { if (arena.contains(pop)) arena.removeChild(pop); }, 700);
+  setTimeout(() => { if (arena.contains(t)) arena.removeChild(t); }, 360);
 }
 
 function spawnTarget() {
   if (!active) return;
+  totalSpawned++;
   const t = document.createElement('div');
   t.className = 'gtgt';
-  t.textContent = syms[Math.floor(Math.random() * syms.length)];
-  t.style.color = cols[Math.floor(Math.random() * cols.length)];
-  t.style.left = Math.random() * 84 + '%';
-  t.style.top = Math.random() * 78 + '%';
-  t.style.fontSize = (Math.random() * 18 + 24) + 'px';
-  const pts = Math.random() < .15 ? 3 : Math.random() < .35 ? 2 : 1;
-  t.dataset.pts = pts;
-  if (pts === 3) t.style.animation = 'bobb .3s ease-in-out infinite alternate';
-  t.addEventListener('click', () => {
-    if (!active) return;
-    t.classList.add('hit');
-    const actual = pts * combo;
-    score += actual;
-    gscoreEl.textContent = score;
-    comboCount++;
-    if (comboCount >= 3) { combo = Math.min(combo + 1, 5); comboCount = 0; }
-    gcomboEl.textContent = 'x' + combo;
-    cmbFill.style.width = (comboCount / 3 * 100) + '%';
-    if (combo > 1) cmbLbl.textContent = 'COMBO x' + combo + '!';
-    clearTimeout(comboTimer);
-    comboTimer = setTimeout(() => { combo = 1; comboCount = 0; gcomboEl.textContent = 'x1'; cmbFill.style.width = '0%'; cmbLbl.textContent = ''; }, 1800);
-    const pop = document.createElement('div');
-    pop.className = 'popscr';
-    pop.textContent = '+' + actual + (combo > 1 ? ' ✳' : '');
-    pop.style.left = t.style.left; pop.style.top = t.style.top;
-    arena.appendChild(pop);
-    setTimeout(() => { if (arena.contains(pop)) arena.removeChild(pop); }, 700);
-    setTimeout(() => { if (arena.contains(t)) arena.removeChild(t); }, 380);
-  });
+
+  // roll target type: 8% time-bonus, then 15% triple, 30% double, rest single
+  const roll = Math.random();
+  let pts, isBonus = false;
+  if (roll < 0.08) { isBonus = true; }
+  else { const r2 = Math.random(); pts = r2 < 0.15 ? 3 : r2 < 0.45 ? 2 : 1; }
+
+  if (isBonus) {
+    t.textContent = '⏱';
+    t.style.color = '#4E6FD4';
+    t.classList.add('special', 'bonus');
+    t.style.fontSize = '30px';
+  } else {
+    t.textContent = syms[Math.floor(Math.random() * syms.length)];
+    t.style.color = cols[Math.floor(Math.random() * cols.length)];
+    t.style.fontSize = (Math.random() * 16 + 26) + 'px';
+    if (pts === 3) { t.classList.add('special'); t.style.color = '#FFD700'; }
+  }
+
+  t.style.left = Math.random() * 82 + '%';
+  t.style.top = Math.random() * 76 + '%';
+
+  // lifespan shrinks slightly as game speeds up; ring shows remaining time
+  const life = Math.max(700, (isBonus ? 1400 : 1500) - elapsed * 30) + Math.random() * 300;
+  const ring = document.createElement('div');
+  ring.className = 'gt-ring';
+  ring.style.animationDuration = life + 'ms';
+  t.appendChild(ring);
+
+  const onHit = (e) => { e.preventDefault(); e.stopPropagation(); registerHit(t, pts, isBonus); };
+  t.addEventListener('click', onHit);
+  t.addEventListener('touchstart', onHit, { passive: false });
+
   arena.appendChild(t);
-  const life = Math.random() * 1200 + 600;
   setTimeout(() => { if (arena.contains(t)) arena.removeChild(t); }, life);
 }
 
 async function endGame() {
   active = false;
-  clearInterval(gIv); clearInterval(tIv); clearTimeout(comboTimer);
-  arena.querySelectorAll('.gtgt').forEach(t => t.remove());
+  clearInterval(gIv); clearTimeout(tIv); clearTimeout(comboTimer);
+  gcdEl.classList.remove('show'); gcdEl.innerHTML = '';
+  arena.querySelectorAll('.gtgt,.popscr,.gparticle').forEach(t => t.remove());
   const name = getPlayerName();
   lastPlayerName = name;
+  const accuracy = totalSpawned ? Math.round(hits / totalSpawned * 100) : 0;
   document.getElementById('goPts').textContent = score;
   document.getElementById('goNm').textContent = name;
   document.getElementById('goRk').textContent = getRankLabel(score);
+  document.getElementById('goStats').innerHTML =
+    `<div class="go-stat"><b>${hits}</b><span>acertos</span></div>` +
+    `<div class="go-stat"><b>x${bestCombo}</b><span>melhor combo</span></div>` +
+    `<div class="go-stat"><b>${accuracy}%</b><span>precisão</span></div>`;
   gover.style.display = 'flex';
   document.getElementById('goPos').textContent = 'Salvando no ranking...';
   document.getElementById('playBtn').disabled = false;
