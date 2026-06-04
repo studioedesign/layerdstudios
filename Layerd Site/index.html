@@ -1,4 +1,3 @@
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,9 +14,9 @@ nav{position:sticky;top:0;z-index:200;background:var(--cream);border-bottom:3px 
 .nlinks a:hover{border-color:var(--orange);color:var(--orange)}
 .nbtn{background:var(--navy);color:var(--cream);padding:8px 18px;font-family:'Syne',sans-serif;font-weight:800;font-size:.78rem;border:3px solid var(--navy);text-decoration:none;letter-spacing:1px;transition:all .2s;cursor:none}
 .nbtn:hover{background:var(--orange);border-color:var(--orange)}
-
+ 
 section{width:100%}
-
+ 
 /* HERO */
 #hero{background:var(--cream);min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:100px 2rem 5rem}
 .htag{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:var(--lime);font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;margin-bottom:2rem}
@@ -43,14 +42,14 @@ section{width:100%}
 .sarrow{width:24px;height:40px;border:2px solid var(--navy);border-radius:12px;position:relative}
 .sarrow::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:4px;height:8px;background:var(--navy);border-radius:2px;animation:sd 2s ease-in-out infinite}
 @keyframes sd{0%{top:6px;opacity:1}100%{top:20px;opacity:0}}
-
+ 
 .mq{background:var(--navy);padding:.9rem 0;overflow:hidden;white-space:nowrap;border-top:3px solid var(--orange);border-bottom:3px solid var(--orange)}
 .mqi{display:inline-flex;animation:mq 25s linear infinite}
 .mqi:hover{animation-play-state:paused}
 .mqit{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lime);padding:0 2.5rem}
 .mqit b{color:var(--orange)}
 @keyframes mq{to{transform:translateX(-50%)}}
-
+ 
 /* SOBRE */
 #sobre{background:var(--navy);padding:6rem 2rem;color:var(--cream)}
 .sobre-wr{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
@@ -75,7 +74,7 @@ section{width:100%}
 .vnum{position:absolute;top:-.8rem;right:1rem;background:var(--orange);color:var(--cream);font-family:'Syne',sans-serif;font-weight:900;font-size:.82rem;padding:2px 10px}
 .vbox h4{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;margin-bottom:.4rem;color:var(--lime)}
 .vbox p{font-size:.88rem;opacity:.6;line-height:1.6}
-
+ 
 /* SERVIÇOS */
 #servicos{background:var(--cream);padding:6rem 2rem}
 .sec-head{text-align:center;margin-bottom:3.5rem}
@@ -104,7 +103,7 @@ section{width:100%}
 .sfl-lbl{font-family:'Syne',sans-serif;font-weight:900;font-size:2.2rem;color:var(--navy);flex:1;line-height:1.1}
 .sfl-desc{flex:2;font-size:.92rem;opacity:.65;line-height:1.65}
 .sfl-arr{font-size:2rem;color:var(--navy)}
-
+ 
 /* PROCESSO */
 #processo{background:var(--lime);padding:6rem 2rem}
 .steps{max-width:1100px;margin:2.5rem auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
@@ -117,7 +116,7 @@ section{width:100%}
 .s-n{font-family:'Syne',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:3px;opacity:.35;margin-bottom:.5rem;text-transform:uppercase}
 .s-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;margin-bottom:.6rem;color:var(--lime)}
 .s-desc{font-size:.83rem;opacity:.6;line-height:1.6}
-
+ 
 /* PALETA */
 #paleta{background:var(--navy);padding:5rem 2rem}
 .pal-wr{max-width:1100px;margin:0 auto}
@@ -133,7 +132,7 @@ section{width:100%}
 .ps5{background:var(--cream);color:var(--navy)}
 .ps6{background:var(--blue);color:var(--cream)}
 .pal-hint{color:var(--cream);opacity:.3;font-size:.78rem;text-align:center;margin-top:1rem}
-
+ 
 /* GAME */
 #game{background:var(--cream);padding:5rem 2rem}
 #game .sec-tag{background:var(--navy);color:var(--lime)}
@@ -196,7 +195,7 @@ section{width:100%}
 .gparticle{position:absolute;pointer-events:none;border-radius:50%;z-index:9}
 /* hit flash */
 .ghitflash{position:absolute;inset:0;background:var(--lime);opacity:0;pointer-events:none;z-index:5}
-
+ 
 /* RANKING */
 .rank-panel{background:var(--navy);padding:0;color:var(--cream)}
 .rank-hdr{background:var(--lime);padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
@@ -226,7 +225,7 @@ section{width:100%}
 .rank-loading{text-align:center;padding:2rem;opacity:.4;font-family:'Syne',sans-serif;font-size:.82rem;letter-spacing:1px;text-transform:uppercase}
 .rank-loading span{display:inline-block;animation:spin 1s linear infinite}
 .rank-footer{padding:.75rem 1.25rem;border-top:1px solid rgba(255,255,255,.08);font-size:.7rem;opacity:.3;text-align:center;font-family:'Syne',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase}
-
+ 
 /* PORTFÓLIO */
 #portfolio{background:var(--navy);padding:6rem 2rem}
 .works-grid{max-width:1100px;margin:2.5rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
@@ -239,7 +238,7 @@ section{width:100%}
 .wname{font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;color:var(--cream)}
 .warr{position:absolute;top:1rem;right:1rem;font-size:1.1rem;color:var(--lime);transition:transform .3s}
 .wcard:hover .warr{transform:rotate(45deg)}
-
+ 
 /* CONTATO */
 #contato{background:var(--orange);padding:8rem 2rem;text-align:center}
 .ctitle{font-family:'Syne',sans-serif;font-weight:900;font-size:clamp(2.5rem,8vw,7rem);color:var(--cream);line-height:.9;margin-bottom:1rem}
@@ -248,7 +247,32 @@ section{width:100%}
 .cpills{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--navy);padding:14px 26px;font-family:'Syne',sans-serif;font-weight:700;font-size:.92rem;text-decoration:none;border:3px solid var(--navy);transition:all .2s;cursor:none}
 .cpill:hover{background:var(--navy);color:var(--lime);transform:translate(-4px,-4px);box-shadow:7px 7px 0 var(--navy)}
-
+ 
+/* ===== BRIEFING / FORMULÁRIO ===== */
+#briefing{background:var(--cream);padding:6rem 2rem;border-top:3px solid var(--navy)}
+.brief-wrap{max-width:920px;margin:0 auto}
+.brief-head{text-align:center;margin-bottom:2.5rem}
+.brief-tag{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:var(--lime);font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 16px;margin-bottom:1.2rem}
+.brief-title{font-family:'Syne',sans-serif;font-weight:900;font-size:clamp(2rem,5vw,3.5rem);color:var(--navy);line-height:1;margin-bottom:1rem}
+.brief-title em{color:var(--orange);font-style:normal}
+.brief-sub{font-size:1rem;line-height:1.7;opacity:.65;max-width:520px;margin:0 auto}
+.brief-frame{background:var(--white);border:3px solid var(--navy);box-shadow:10px 10px 0 var(--navy);overflow:hidden;position:relative}
+.brief-frame-bar{background:var(--navy);color:var(--cream);display:flex;align-items:center;gap:10px;padding:.8rem 1.2rem;font-family:'Syne',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:1px;text-transform:uppercase}
+.brief-dots{display:flex;gap:6px}
+.brief-dots span{width:11px;height:11px;border-radius:50%}
+.brief-dots span:nth-child(1){background:var(--orange)}
+.brief-dots span:nth-child(2){background:var(--lime)}
+.brief-dots span:nth-child(3){background:var(--lav)}
+.brief-frame-bar b{margin-left:auto;color:var(--lime);font-weight:700}
+.brief-loading{position:absolute;inset:0;top:46px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:var(--cream);color:var(--navy);z-index:1;transition:opacity .4s}
+.brief-loading.hide{opacity:0;pointer-events:none}
+.brief-loading .bl-star{font-size:2.5rem;color:var(--orange);animation:spin 3s linear infinite}
+.brief-loading p{font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;opacity:.5}
+.brief-frame iframe{display:block;width:100%;height:1700px;border:0;background:var(--white)}
+.brief-alt{text-align:center;margin-top:1.5rem;font-size:.85rem;opacity:.55}
+.brief-alt a{color:var(--orange);font-weight:700;text-decoration:none;border-bottom:2px solid var(--orange);cursor:none}
+.brief-alt a:hover{color:var(--navy);border-color:var(--navy)}
+ 
 footer{background:var(--navy);padding:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:3px solid var(--orange)}
 .flogo{font-family:'Syne',sans-serif;font-weight:900;font-size:1.3rem;color:var(--cream)}
 .flogo b{color:var(--orange)}
@@ -256,12 +280,12 @@ footer{background:var(--navy);padding:2rem;display:flex;justify-content:space-be
 .fsocial{display:flex;gap:.75rem}
 .fsi{width:34px;height:34px;border:2px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--cream);transition:all .2s;cursor:none;font-family:'Syne',sans-serif;font-weight:700}
 .fsi:hover{background:var(--orange);border-color:var(--orange)}
-
+ 
 .rev{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
 .rev-l{opacity:0;transform:translateX(-30px);transition:opacity .7s,transform .7s}
 .rev-r{opacity:0;transform:translateX(30px);transition:opacity .7s,transform .7s}
 .rev.in,.rev-l.in,.rev-r.in{opacity:1;transform:none}
-
+ 
 /* ============ INTRO ============ */
 #intro{position:fixed;inset:0;z-index:10000;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;transition:opacity .8s cubic-bezier(.76,0,.24,1),transform .8s cubic-bezier(.76,0,.24,1)}
 #intro.gone{opacity:0;transform:scale(1.08);pointer-events:none}
@@ -300,7 +324,7 @@ body.intro-on{overflow:hidden;height:100vh}
 @keyframes iorbpop{to{transform:translateY(-50%) scale(0) rotate(180deg);opacity:0}}
 @keyframes iorbf{0%,100%{transform:translateY(-50%)}50%{transform:translateY(-75%)}}
 .intro-pop-count{color:var(--lime);font-family:'Syne',sans-serif;font-weight:900;font-size:.85rem;margin-top:.6rem;min-height:1.2rem;letter-spacing:1px}
-
+ 
 /* ============ PLANOS PAGE ============ */
 #planos-page{position:fixed;inset:0;z-index:9500;background:var(--navy);overflow-y:auto;display:none;color:var(--cream)}
 #planos-page.show{display:block;animation:ppin .5s ease-out}
@@ -337,7 +361,7 @@ body.intro-on{overflow:hidden;height:100vh}
 .pp-notify button{background:var(--lime);color:var(--navy);border:3px solid var(--lime);font-family:'Syne',sans-serif;font-weight:800;font-size:.85rem;padding:12px 22px;letter-spacing:1px;text-transform:uppercase;cursor:none;white-space:nowrap;transition:all .2s}
 .pp-notify button:hover{background:var(--orange);border-color:var(--orange);color:var(--cream)}
 .pp-notify-msg{color:var(--lime);font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;margin-top:1rem;min-height:1.2rem;letter-spacing:1px}
-
+ 
 /* ============ MOBILE OPTIMIZATION ============ */
 @media(max-width:900px){
   .sobre-wr{grid-template-columns:1fr;gap:2.5rem}
@@ -406,6 +430,10 @@ body.intro-on{overflow:hidden;height:100vh}
   .ctitle{font-size:clamp(2.2rem,14vw,4rem)}
   .cpills{gap:.7rem}
   .cpill{padding:12px 18px;font-size:.82rem}
+  #briefing{padding:4rem 1rem}
+  .brief-frame{box-shadow:6px 6px 0 var(--navy)}
+  .brief-frame iframe{height:2050px}
+  .brief-frame-bar{font-size:.68rem;padding:.7rem .9rem}
   footer{padding:1.5rem 1.2rem;justify-content:center;text-align:center}
   .mqit{font-size:.85rem;padding:0 1.5rem}
   /* intro mobile */
@@ -426,10 +454,10 @@ body.intro-on{overflow:hidden;height:100vh}
   .works-grid{grid-template-columns:1fr}
 }
 </style>
-
+ 
 <div id="cur"></div>
 <div class="tip" id="tipEl"></div>
-
+ 
 <!-- ===== INTRO ===== -->
 <div id="intro">
   <div class="intro-floats">
@@ -451,7 +479,7 @@ body.intro-on{overflow:hidden;height:100vh}
   </div>
   <button class="intro-skip" id="introSkip">Pular intro →</button>
 </div>
-
+ 
 <!-- ===== PLANOS PAGE ===== -->
 <div id="planos-page">
   <div class="pp-nav">
@@ -496,7 +524,7 @@ body.intro-on{overflow:hidden;height:100vh}
     <div class="pp-notify-msg" id="ppMsg"></div>
   </div>
 </div>
-
+ 
 <nav>
   <div class="nlogo">lay<b>e</b>r'd</div>
   <ul class="nlinks">
@@ -504,10 +532,10 @@ body.intro-on{overflow:hidden;height:100vh}
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#processo">Processo</a></li>
     <li><a href="#game">Game ✳</a></li>
-    <li><a href="#contato" class="nbtn">Fale com a gente</a></li>
+    <li><a href="#briefing" class="nbtn">Fazer briefing</a></li>
   </ul>
 </nav>
-
+ 
 <section id="hero">
   <div class="floats">
     <div class="f1">✳</div><div class="f2">✳</div>
@@ -525,9 +553,9 @@ body.intro-on{overflow:hidden;height:100vh}
   </div>
   <div class="scroll-hint"><div class="sarrow"></div>scroll</div>
 </section>
-
+ 
 <div class="mq"><div class="mqi" id="mqI"></div></div>
-
+ 
 <section id="sobre">
   <div class="sobre-wr">
     <div class="rev-l">
@@ -556,7 +584,7 @@ body.intro-on{overflow:hidden;height:100vh}
     </div>
   </div>
 </section>
-
+ 
 <section id="servicos">
   <div class="sec-head rev">
     <div class="sec-tag">o que a gente faz</div>
@@ -591,7 +619,7 @@ body.intro-on{overflow:hidden;height:100vh}
     </div>
   </div>
 </section>
-
+ 
 <section id="processo">
   <div style="max-width:1100px;margin:0 auto">
     <div class="sec-head rev" style="text-align:left">
@@ -606,7 +634,7 @@ body.intro-on{overflow:hidden;height:100vh}
     </div>
   </div>
 </section>
-
+ 
 <section id="paleta">
   <div class="pal-wr">
     <div class="sec-head rev" style="text-align:left">
@@ -624,7 +652,7 @@ body.intro-on{overflow:hidden;height:100vh}
     <p class="pal-hint">Passe o mouse pra expandir ✳</p>
   </div>
 </section>
-
+ 
 <section id="game">
   <div class="sec-head rev">
     <div class="sec-tag">mini game</div>
@@ -678,7 +706,7 @@ body.intro-on{overflow:hidden;height:100vh}
     </div>
   </div>
 </section>
-
+ 
 <section id="portfolio">
   <div style="max-width:1100px;margin:0 auto">
     <div class="sec-head rev" style="text-align:left">
@@ -697,20 +725,45 @@ body.intro-on{overflow:hidden;height:100vh}
     </div>
   </div>
 </section>
-
+ 
+<section id="briefing">
+  <div class="brief-wrap">
+    <div class="brief-head rev">
+      <div class="brief-tag"><span class="spin">✳</span> briefing gratuito</div>
+      <h2 class="brief-title">Conta pra gente<br>sobre <em>sua marca.</em></h2>
+      <p class="brief-sub">Preencha a cotação de branding abaixo. Leva poucos minutos e é o primeiro passo pra construirmos sua identidade — a gente recebe tudo e responde rapidinho. ✳</p>
+    </div>
+    <div class="brief-frame rev">
+      <div class="brief-frame-bar">
+        <div class="brief-dots"><span></span><span></span><span></span></div>
+        Cotação de Branding <b>✳ Layerd</b>
+      </div>
+      <div class="brief-loading" id="briefLoading">
+        <div class="bl-star">✳</div>
+        <p>Carregando formulário...</p>
+      </div>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfvkcUUdC8UjOxPWKmUQY8Uljift42ETUOb3g9c0QCrI8hIaQ/viewform?embedded=true"
+        id="briefIframe"
+        title="Cotação de Branding - Layerd Studios"
+        loading="lazy">Carregando…</iframe>
+    </div>
+    <p class="brief-alt">Prefere abrir em tela cheia? <a href="https://forms.gle/qjkCsJZ1wgFr9LJP6" target="_blank" rel="noopener">Abrir formulário no Google Forms →</a></p>
+  </div>
+</section>
+ 
 <section id="contato">
   <div class="rev">
     <h2 class="ctitle">Bora trabalhar<br><em>juntos?</em></h2>
     <p class="csub">Sua marca merece uma identidade que faz barulho. ✳</p>
     <div class="cpills">
-      <a href="#" class="cpill">✳ Instagram</a>
-      <a href="#" class="cpill">✳ @layerdstudios</a>
-      <a href="#" class="cpill">✳ Enviar mensagem</a>
-      <a href="#" class="cpill">✳ Briefing gratuito</a>
+      <a href="https://instagram.com/layerdstudios" target="_blank" rel="noopener" class="cpill">✳ @layerdstudios</a>
+      <a href="mailto:layerdstudioss@gmail.com" class="cpill">✳ Mande um e-mail</a>
+      <a href="#briefing" class="cpill">✳ Briefing gratuito</a>
     </div>
   </div>
 </section>
-
+ 
 <footer>
   <div class="flogo">lay<b>e</b>r'd studios</div>
   <div class="fcopy">© 2025 Layerd Studios</div>
@@ -718,7 +771,7 @@ body.intro-on{overflow:hidden;height:100vh}
     <div class="fsi">in</div><div class="fsi">ig</div><div class="fsi">be</div>
   </div>
 </footer>
-
+ 
 <script>
 const cur = document.getElementById('cur');
 const tipEl = document.getElementById('tipEl');
@@ -744,16 +797,16 @@ function attachBig() {
   });
 }
 attachBig();
-
+ 
 const mqItems = ['Design','Social Media','Branding','Identidade Visual','Estratégia','Conteúdo','✳','Direção Criativa','Presença Digital','✳'];
 const mqEl = document.getElementById('mqI');
 const doubled = [...mqItems,...mqItems,...mqItems,...mqItems];
 mqEl.innerHTML = doubled.map(i => `<span class="mqit">${i}<b> ✳</b></span>`).join('');
-
+ 
 const revAll = document.querySelectorAll('.rev,.rev-l,.rev-r');
 const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), { threshold: .12 });
 revAll.forEach(e => ro.observe(e));
-
+ 
 function animCount(el, target) {
   let n = 0; const s = target / 50;
   const suffix = target === 100 ? '%' : target === 360 ? '°' : '+';
@@ -772,7 +825,7 @@ const so = new IntersectionObserver(es => {
 }, { threshold: .5 });
 const sobreEl = document.getElementById('sobre');
 if (sobreEl) so.observe(sobreEl);
-
+ 
 document.addEventListener('mousemove', e => {
   const x = (e.clientX / window.innerWidth - .5) * 22;
   const y = (e.clientY / window.innerHeight - .5) * 22;
@@ -781,7 +834,7 @@ document.addEventListener('mousemove', e => {
     el.style.transform = `translate(${x*d}px,${y*d}px)`;
   });
 });
-
+ 
 document.querySelectorAll('.wcard').forEach(card => {
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect();
@@ -791,14 +844,23 @@ document.querySelectorAll('.wcard').forEach(card => {
   });
   card.addEventListener('mouseleave', () => card.style.transform = '');
 });
-
+ 
 let heroInt = null;
 const heroT = document.getElementById('heroT');
 heroT.addEventListener('mouseenter', () => {
   heroInt = setInterval(() => { heroT.style.letterSpacing = (Math.random() * 4 - 1) + 'px'; }, 100);
 });
 heroT.addEventListener('mouseleave', () => { clearInterval(heroInt); heroT.style.letterSpacing = ''; });
-
+ 
+// =================== BRIEFING FORM ===================
+const briefIframe = document.getElementById('briefIframe');
+const briefLoading = document.getElementById('briefLoading');
+if (briefIframe) {
+  briefIframe.addEventListener('load', () => briefLoading.classList.add('hide'));
+  // fallback: hide after 4s even if load event is missed (cross-origin)
+  setTimeout(() => briefLoading.classList.add('hide'), 4000);
+}
+ 
 // =================== INTRO ===================
 document.body.classList.add('intro-on');
 const introEl = document.getElementById('intro');
@@ -809,7 +871,7 @@ function enterSite(){
 }
 document.getElementById('introEnter').addEventListener('click', enterSite);
 document.getElementById('introSkip').addEventListener('click', enterSite);
-
+ 
 // intro orbit poppers (interactive)
 const orbit = document.getElementById('introOrbit');
 const introPop = document.getElementById('introPop');
@@ -837,7 +899,7 @@ function buildOrbit(){
   attachBig();
 }
 buildOrbit();
-
+ 
 // =================== PLANOS PAGE ===================
 const planosPage = document.getElementById('planos-page');
 const pacoteBtn = document.getElementById('pacoteBtn');
@@ -854,7 +916,7 @@ function closePlanos(){
 }
 if(pacoteBtn) pacoteBtn.addEventListener('click', openPlanos);
 document.getElementById('ppBack').addEventListener('click', closePlanos);
-
+ 
 // planos bubble canvas (interactive)
 const ppCanvas = document.getElementById('ppCanvas');
 const ppCols = ['#C5D400','#D94F1E','#BBA8D6','#4E6FD4'];
@@ -889,7 +951,7 @@ function stopBubbles(){
   ppCanvas.removeEventListener('mousemove', canvasMove);
   ppCanvas.removeEventListener('touchmove', canvasMove);
 }
-
+ 
 // planos notify
 document.getElementById('ppNotify').addEventListener('click', ()=>{
   const email = document.getElementById('ppEmail').value.trim();
@@ -901,7 +963,7 @@ document.getElementById('ppNotify').addEventListener('click', ()=>{
     msg.textContent = 'Coloca um e-mail válido pra gente te avisar ✳';
   }
 });
-
+ 
 // =================== GAME ===================
 let score = 0, timeLeft = 15, active = false, gIv = null, tIv = null;
 let combo = 1, comboCount = 0, comboTimer = null;
@@ -919,7 +981,7 @@ const cmbLbl = document.getElementById('cmbLbl');
 const gstartEl = document.getElementById('gstart');
 const gcdEl = document.getElementById('gcountdown');
 const rankListEl = document.getElementById('rankList');
-
+ 
 const syms = ['✳','✦','❋','★','◈'];
 const cols = ['#C5D400','#D94F1E','#BBA8D6','#4E6FD4','#FFFFFF','#F4EFC8'];
 const rankTiers = [
@@ -932,11 +994,11 @@ function getRankLabel(pts) {
   for (const [min, l] of rankTiers) if (pts >= min) lbl = l;
   return lbl;
 }
-
+ 
 // ===== PERSISTENT STORAGE =====
 const STORAGE_KEY = 'layerd_ranking_v1';
 let cachedRanking = null; // last known-good ranking, shared across all visitors
-
+ 
 // Returns {ok:true, data:[...]} on success (including legit empty),
 // or {ok:false} when the read failed and we should NOT trust the result.
 async function readRanking() {
@@ -952,20 +1014,20 @@ async function readRanking() {
     return { ok: true, data: [] };                     // first load, nothing yet
   }
 }
-
+ 
 async function loadRanking() {
   const r = await readRanking();
   if (r.ok) { cachedRanking = r.data; return r.data; }
   return cachedRanking || [];
 }
-
+ 
 async function saveRanking(data) {
   try {
     await window.storage.set(STORAGE_KEY, JSON.stringify(data), true);
     cachedRanking = data;
   } catch (e) {}
 }
-
+ 
 async function addScore(name, pts) {
   let ranking = await loadRanking();
   ranking = ranking.slice();
@@ -976,7 +1038,7 @@ async function addScore(name, pts) {
   await saveRanking(ranking);
   return ranking;
 }
-
+ 
 function renderRanking(ranking, highlightName) {
   if (!ranking || !ranking.length) {
     rankListEl.innerHTML = '<div class="rank-empty"><span>✳</span>Nenhum jogador ainda.<br>Seja o primeiro!</div>';
@@ -1000,13 +1062,13 @@ function renderRanking(ranking, highlightName) {
   }).join('');
   attachBig();
 }
-
+ 
 async function initRanking() {
   const data = await loadRanking();
   renderRanking(data, '');
 }
 initRanking();
-
+ 
 // Auto-refresh: only re-render when we actually got fresh, valid data.
 // A failed/transient read leaves the visible ranking untouched.
 setInterval(async () => {
@@ -1016,11 +1078,11 @@ setInterval(async () => {
   cachedRanking = r.data;
   renderRanking(r.data, lastPlayerName);
 }, 12000);
-
+ 
 function getPlayerName() {
   return document.getElementById('pname').value.trim() || 'Anônimo';
 }
-
+ 
 function startGame() {
   const name = getPlayerName();
   lastPlayerName = name;
@@ -1037,7 +1099,7 @@ function startGame() {
   gstartEl.classList.add('hide');
   document.getElementById('playBtn').disabled = true;
   arena.querySelectorAll('.gtgt,.popscr,.gparticle').forEach(t => t.remove());
-
+ 
   // 3-2-1 countdown, then go
   let cd = 3;
   gcdEl.classList.add('show');
@@ -1056,7 +1118,7 @@ function startGame() {
     }
   }, 800);
 }
-
+ 
 function runGame() {
   active = true;
   gIv = setInterval(() => {
@@ -1069,7 +1131,7 @@ function runGame() {
   scheduleSpawn();
   for (let i = 0; i < 4; i++) setTimeout(spawnTarget, i * 120);
 }
-
+ 
 // spawn rate accelerates as time passes (difficulty ramp)
 function scheduleSpawn() {
   if (!active) return;
@@ -1077,7 +1139,7 @@ function scheduleSpawn() {
   const interval = Math.max(260, 620 - elapsed * 28); // 620ms → ~260ms
   tIv = setTimeout(scheduleSpawn, interval);
 }
-
+ 
 function makeParticles(x, y, color) {
   for (let i = 0; i < 8; i++) {
     const p = document.createElement('div');
@@ -1097,7 +1159,7 @@ function makeParticles(x, y, color) {
     setTimeout(() => { if (arena.contains(p)) arena.removeChild(p); }, 520);
   }
 }
-
+ 
 function registerHit(t, pts, isBonus) {
   if (!active) return;
   t.classList.add('hit');
@@ -1106,7 +1168,7 @@ function registerHit(t, pts, isBonus) {
   const cx = tr.left - r.left + tr.width / 2;
   const cy = tr.top - r.top + tr.height / 2;
   makeParticles(cx, cy, t.style.color || '#C5D400');
-
+ 
   if (isBonus) {
     timeLeft += 3;
     gtimeEl.textContent = timeLeft;
@@ -1120,7 +1182,7 @@ function registerHit(t, pts, isBonus) {
     setTimeout(() => { if (arena.contains(t)) arena.removeChild(t); }, 360);
     return;
   }
-
+ 
   hits++;
   ghitsEl.textContent = hits;
   const actual = pts * combo;
@@ -1134,7 +1196,7 @@ function registerHit(t, pts, isBonus) {
   if (combo > 1) cmbLbl.textContent = 'COMBO x' + combo + '!';
   clearTimeout(comboTimer);
   comboTimer = setTimeout(() => { combo = 1; comboCount = 0; gcomboEl.textContent = 'x1'; cmbFill.style.width = '0%'; cmbLbl.textContent = ''; }, 1700);
-
+ 
   const pop = document.createElement('div');
   pop.className = 'popscr';
   pop.textContent = '+' + actual + (combo > 1 ? ' ✳' : '');
@@ -1143,19 +1205,19 @@ function registerHit(t, pts, isBonus) {
   setTimeout(() => { if (arena.contains(pop)) arena.removeChild(pop); }, 700);
   setTimeout(() => { if (arena.contains(t)) arena.removeChild(t); }, 360);
 }
-
+ 
 function spawnTarget() {
   if (!active) return;
   totalSpawned++;
   const t = document.createElement('div');
   t.className = 'gtgt';
-
+ 
   // roll target type: 8% time-bonus, then 15% triple, 30% double, rest single
   const roll = Math.random();
   let pts, isBonus = false;
   if (roll < 0.08) { isBonus = true; }
   else { const r2 = Math.random(); pts = r2 < 0.15 ? 3 : r2 < 0.45 ? 2 : 1; }
-
+ 
   if (isBonus) {
     t.textContent = '⏱';
     t.style.color = '#4E6FD4';
@@ -1167,25 +1229,25 @@ function spawnTarget() {
     t.style.fontSize = (Math.random() * 16 + 26) + 'px';
     if (pts === 3) { t.classList.add('special'); t.style.color = '#FFD700'; }
   }
-
+ 
   t.style.left = Math.random() * 82 + '%';
   t.style.top = Math.random() * 76 + '%';
-
+ 
   // lifespan shrinks slightly as game speeds up; ring shows remaining time
   const life = Math.max(700, (isBonus ? 1400 : 1500) - elapsed * 30) + Math.random() * 300;
   const ring = document.createElement('div');
   ring.className = 'gt-ring';
   ring.style.animationDuration = life + 'ms';
   t.appendChild(ring);
-
+ 
   const onHit = (e) => { e.preventDefault(); e.stopPropagation(); registerHit(t, pts, isBonus); };
   t.addEventListener('click', onHit);
   t.addEventListener('touchstart', onHit, { passive: false });
-
+ 
   arena.appendChild(t);
   setTimeout(() => { if (arena.contains(t)) arena.removeChild(t); }, life);
 }
-
+ 
 async function endGame() {
   active = false;
   clearInterval(gIv); clearTimeout(tIv); clearTimeout(comboTimer);
@@ -1204,17 +1266,17 @@ async function endGame() {
   gover.style.display = 'flex';
   document.getElementById('goPos').textContent = 'Salvando no ranking...';
   document.getElementById('playBtn').disabled = false;
-
+ 
   const updated = await addScore(name, score);
   const myPos = updated.findIndex(r => r.name === name && r.pts === score);
   document.getElementById('goPos').textContent = myPos >= 0 ? `Posição #${myPos + 1} no ranking global ✳` : '';
   renderRanking(updated, name);
 }
-
+ 
 function restartGame() {
   gover.style.display = 'none';
   startGame();
 }
-
+ 
 document.getElementById('pname').addEventListener('keydown', e => { if (e.key === 'Enter') startGame(); });
 </script>
