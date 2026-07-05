@@ -1,0 +1,12 @@
+{
+  "name": "layerd-studios",
+  "version": "1.0.0",
+  "description": "Layerd Studios — site oficial",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
