@@ -1,0 +1,11 @@
+import { createClient } from '@supabase/supabase-js'
+
+// Estas variáveis são definidas no painel da Vercel em Settings > Environment Variables
+const supabaseUrl  = process.env.SUPABASE_URL
+const supabaseKey  = process.env.SUPABASE_SERVICE_ROLE_KEY  // service role = acesso total server-side
+
+if (!supabaseUrl || !supabaseKey) {
+  throw new Error('Variáveis SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY não configuradas.')
+}
+
+export const supabase = createClient(supabaseUrl, supabaseKey)

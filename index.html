@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Planos — Layer'd Studios</title>
+<meta name="description" content="Planos completos da Layer'd Studios: design, social media, fotografia e planos personalizados.">
+<meta name="theme-color" content="#0E0C1C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+.hero-sec{padding-top:8.5rem}
+.swatchrow{display:flex;gap:8px;margin-top:1.4rem;position:relative;z-index:2}
+.swatch{width:34px;height:34px;border-radius:50%;border:2px solid rgba(244,239,200,.4)}
+.paintcell{min-height:280px;padding:0!important;overflow:hidden}
+.paintbar{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.4rem;
+  border-bottom:2px solid var(--line)}
+.paintbar h4{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem}
+.paintbar span{font-family:'Space Grotesk',monospace;font-size:.6rem;opacity:.45;text-transform:uppercase;letter-spacing:.12em}
+#ppCanvas{width:100%;height:210px;position:relative;overflow:hidden;cursor:none}
+.ppbub{position:absolute;pointer-events:none;mix-blend-mode:screen;border-radius:50%}
+.custom-badge{position:absolute;top:1.4rem;right:1.4rem;font-family:'Space Grotesk',monospace;font-size:.58rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--gr);border:1px solid var(--gr);border-radius:99px;
+  padding:4px 10px}
+</style>
+</head>
+<body>
+
+<div class="halftone"></div>
+<div class="grain"></div>
+<div class="scanlines"></div>
+<div class="floaters"></div>
+<div id="cur"></div>
+<div id="curt"></div>
+<div id="pwipe"><i></i><i></i><i></i><i></i></div>
+
+<div id="topnav">
+  <a class="navlogo" href="/" data-nav>LAY<em>E</em>R'D</a>
+  <a class="navback" href="/" data-nav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Voltar ao estúdio</a>
+</div>
+
+<a id="wafab" href="https://wa.me/5519996139437" target="_blank" rel="noopener" title="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- HERO -->
+<section class="sec hero-sec">
+  <div class="bwrap">
+    <div class="bento c4">
+      <div class="cell ink span4 top reveal" style="--dx:14%;--dy:20%;color:var(--cr)">
+        <div class="dots-fade" style="color:var(--or)"></div>
+        <div class="regmk">PL—00 · CMYK</div>
+        <span class="tag ora"><span class="dp"></span>planos &amp; valores</span>
+        <h1 class="disp" style="margin-top:1rem">Escolha a<br><em>camada</em> ideal<br>pra sua marca.</h1>
+        <p class="lede" style="margin-top:.6rem">Design, social media e fotografia — combinados do jeito que fizer sentido pro seu momento. Se nenhum plano encaixar exatamente, a gente monta um <strong>sob medida.</strong></p>
+        <div class="swatchrow">
+          <div class="swatch" style="background:var(--or)"></div>
+          <div class="swatch" style="background:var(--gr)"></div>
+          <div class="swatch" style="background:var(--lv)"></div>
+          <div class="swatch" style="background:var(--bl)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="mq or"><div class="mqtrack">
+  <span>Essencial <i>✺</i></span><span>Crescimento <i>✺</i></span><span>Completo <i>✺</i></span><span>Personalizado <i>✺</i></span>
+  <span>Essencial <i>✺</i></span><span>Crescimento <i>✺</i></span><span>Completo <i>✺</i></span><span>Personalizado <i>✺</i></span>
+</div></div>
+
+<!-- 4 PLANOS -->
+<section class="sec" id="planos">
+  <div class="bwrap">
+    <div class="sechead reveal">
+      <span class="tag grn"><span class="dp"></span>4 formas de começar</span>
+      <h2 class="disp" style="margin-top:1rem;font-size:clamp(2rem,5vw,3.4rem)">Do primeiro logotipo<br>ao <span class="grn">acompanhamento total.</span></h2>
+      <p class="lede" style="margin-top:.8rem">Os valores fechados estão em preparação — mas o plano personalizado já pode ser conversado agora mesmo.</p>
+    </div>
+
+    <div class="plans n4 reveal">
+      <div class="pcard">
+        <div class="pribbon">em breve</div>
+        <div class="pname">plano 01</div>
+        <div class="ptitle">Essencial</div>
+        <div class="pprice">R$ ---<span>pacote único</span></div>
+        <ul>
+          <li>Logotipo &amp; variações</li>
+          <li>Paleta de cores</li>
+          <li>Tipografia da marca</li>
+          <li>Mini manual de marca</li>
+        </ul>
+        <button class="btn bo pbtn off" disabled>Em breve ✺</button>
+      </div>
+      <div class="pcard">
+        <div class="pribbon">popular</div>
+        <div class="pname">plano 02</div>
+        <div class="ptitle">Crescimento</div>
+        <div class="pprice">R$ ---<span>por mês</span></div>
+        <ul>
+          <li>Identidade visual completa</li>
+          <li>Gestão de social media</li>
+          <li>Calendário editorial</li>
+          <li>Relatório mensal</li>
+        </ul>
+        <button class="btn bor pbtn off" disabled>Em breve ✺</button>
+      </div>
+      <div class="pcard">
+        <div class="pribbon">em breve</div>
+        <div class="pname">plano 03</div>
+        <div class="ptitle">Completo</div>
+        <div class="pprice">R$ ---<span>por mês</span></div>
+        <ul>
+          <li>Tudo do Crescimento</li>
+          <li>Sessões de fotografia mensais</li>
+          <li>Direção estratégica de marca</li>
+          <li>Criação &amp; manutenção de site</li>
+        </ul>
+        <button class="btn bo pbtn off" disabled>Em breve ✺</button>
+      </div>
+      <div class="pcard custom">
+        <div class="pribbon">sob consulta</div>
+        <div class="pname">plano 04</div>
+        <div class="ptitle">Personalizado</div>
+        <div class="pprice open">Vamos<br>conversar<span>sem compromisso</span></div>
+        <ul>
+          <li>Combine design, social e fotografia</li>
+          <li>Escopo e prazos sob medida</li>
+          <li>Proposta em até 48h</li>
+          <li>Ideal pra projetos fora da caixa</li>
+        </ul>
+        <a class="btn bg pbtn" href="https://wa.me/5519996139437" target="_blank" rel="noopener">Chamar no WhatsApp ✺</a>
+      </div>
+    </div>
+
+    <div style="margin-top:2.4rem" class="reveal">
+      <form class="notify" data-notify-form onsubmit="return false">
+        <input type="email" placeholder="Seu e-mail para ser avisado" autocomplete="off">
+        <button class="btn bor" type="button">Me avisa ✺</button>
+      </form>
+      <div class="notifymsg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PINTE COM LUZ -->
+<section class="sec tight">
+  <div class="bwrap">
+    <div class="bento c3 reveal">
+      <div class="cell paintcell span2" style="justify-content:flex-start;padding:0!important">
+        <div class="paintbar"><h4>✺ Enquanto isso, pinte com luz</h4><span>mova o cursor</span></div>
+        <div id="ppCanvas"></div>
+      </div>
+      <div class="cell or"><div class="cico" style="color:var(--ink)">◈</div><h4>Curioso(a) sobre algo específico?</h4><p style="color:rgba(14,12,28,.72)">Chama no WhatsApp e monta um escopo com a gente antes mesmo dos planos abrirem.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="mq ink rev"><div class="mqtrack">
+  <span>Design <i>✺</i></span><span>Social Media <i>✺</i></span><span>Fotografia <i>✺</i></span><span>Estratégia <i>✺</i></span><span>Sites <i>✺</i></span>
+  <span>Design <i>✺</i></span><span>Social Media <i>✺</i></span><span>Fotografia <i>✺</i></span><span>Estratégia <i>✺</i></span><span>Sites <i>✺</i></span>
+</div></div>
+
+<!-- CONTATO -->
+<section class="sec">
+  <div class="bwrap">
+    <div class="sechead reveal">
+      <span class="tag"><span class="dp"></span>vamos conversar</span>
+      <h2 class="disp" style="margin-top:1rem;font-size:clamp(2rem,5vw,3.4rem)">Ainda em dúvida?<br>Fala com <em>a gente.</em></h2>
+    </div>
+    <div class="ccrow reveal">
+      <a class="cell ink" href="https://instagram.com/layerdstudios" target="_blank" rel="noopener"><div class="cico">📸</div><h4>Instagram</h4><p>@layerdstudios — projetos e bastidores.</p></a>
+      <a class="cell or" href="https://wa.me/5519996139437" target="_blank" rel="noopener"><div class="cico" style="color:var(--ink)">💬</div><h4>WhatsApp</h4><p>Chama direto e conta sobre sua ideia.</p></a>
+      <a class="cell gr" href="/#servicos" data-nav><div class="cico" style="color:var(--ink)">✺</div><h4>Todos os serviços</h4><p>Design, social media e fotografia.</p></a>
+    </div>
+  </div>
+</section>
+
+<footer class="sitef"><div class="fmark">© 2026 Layer'd Studios · São Paulo, Brasil</div></footer>
+
+<script src="/assets/common.js"></script>
+<script>
+/* pinte com luz — canvas de bolhas coloridas que seguem o cursor */
+(function(){
+  var ppC=document.getElementById('ppCanvas');
+  if(!ppC)return;
+  var cols=['#E8547C','#D4A847','#3ABDB0','#BBA8D6','#D94F1E','#4E6FD4','#C5D400'];
+  var lastBub=0;
+  function bub(x,y){
+    var b=document.createElement('div');b.className='ppbub';
+    var s=Math.random()*46+18;
+    b.style.cssText='width:'+s+'px;height:'+s+'px;left:'+(x-s/2)+'px;top:'+(y-s/2)+'px;background:'+cols[Math.floor(Math.random()*cols.length)]+';transition:opacity 1.2s,transform 1.2s;opacity:.7';
+    ppC.appendChild(b);
+    requestAnimationFrame(function(){b.style.opacity='0';b.style.transform='scale(2.3)';});
+    setTimeout(function(){if(ppC.contains(b))ppC.removeChild(b);},1250);
+  }
+  function move(e){
+    var r=ppC.getBoundingClientRect();
+    var p=e.touches?e.touches[0]:e;
+    var x=p.clientX-r.left,y=p.clientY-r.top;
+    if(x<0||y<0||x>r.width||y>r.height)return;
+    var now=Date.now();
+    if(now-lastBub>34){bub(x,y);lastBub=now;}
+  }
+  ppC.addEventListener('mousemove',move);
+  ppC.addEventListener('touchmove',move,{passive:true});
+})();
+</script>
+</body>
+</html>
